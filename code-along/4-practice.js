@@ -20,6 +20,8 @@ let blockchain = [
 // `brian transferred 7000 KelloggCoin to evan`, to the 
 // JavaScript console
 
+console.log(`${blockchain[0].fromUser} transfered ${blockchain[0].amount}`)
+
 // for (declare a variable for counting ("counter variable"); determine the criteria for the number of times to loop; increment the counter)
 // then, inside the loop, try two different "recipes":
 
@@ -27,7 +29,17 @@ console.log(`=== RECIPE #1 ===`)
 // Recipe (algorithm) #1: One line of code inside the loop
 // - write each Object in the blockchain to the JavaScript console using a single line of code
 
+for (let i = 0; i < blockchain.length; i++) {
+  console.log(`${blockchain[i].fromUser} transfered ${blockchain[i].amount} KelloggCoin to ${blockchain[i].toUser}`)
+}
+
 console.log(`=== RECIPE #2 ===`)
 // Recipe (algorithm) #2: Two lines of code inside the loop
+(let i = 0; i < blockchain.length; i++)
 // - create a variable for each "transaction" in the blockchain
+
+
+let transaction = blockchain[i]
 // - write each "transaction" to the JavaScript console
+
+console.log(`${transaction.fromUser} transfered ${transaction.amount} KelloggCoin to ${transaction.toUser}`)
